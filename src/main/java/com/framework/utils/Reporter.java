@@ -35,8 +35,7 @@ public abstract class Reporter extends DriverInstance {
 
 	@BeforeSuite(alwaysRun = true)
 	public synchronized void startReport() {
-		String date = new SimpleDateFormat(pattern).format(new Date());
-		folderName = "reports/" + date;
+		folderName = "reports/";
 
 		File folder = new File("./" + folderName);
 		if (!folder.exists()) {
@@ -81,7 +80,7 @@ public abstract class Reporter extends DriverInstance {
 				snapNumber = takeSnap();
 				try {
 					img = MediaEntityBuilder
-							.createScreenCaptureFromPath("./../../" + folderName + "/images/" + snapNumber + ".jpg")
+							.createScreenCaptureFromPath("./images/" + snapNumber + ".jpg")
 							.build();
 				} catch (IOException e) {
 				}
