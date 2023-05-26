@@ -19,7 +19,7 @@ public class BaseMethods extends SeleniumBase {
 	
 	@BeforeMethod
 	public void preCondition() {
-		startApp("chrome", false, "http://65.0.72.176/");
+		startApp("chrome", false, "http://3.110.168.136/");
 		setNode();
 
 	}
